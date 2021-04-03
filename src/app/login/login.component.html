@@ -1,0 +1,42 @@
+<div
+  [formGroup]="signInForm"
+  class="m-auto d-flex flex-column justify-content-center vh-100"
+>
+  <div class="d-flex col-12">
+    <div class="col-2"></div>
+    <div class="mb-3 col-8">
+      <input
+        type="email"
+        class="form-control"
+        id="formGroupExampleInput"
+        placeholder="Email"
+        formControlName="email"
+      />
+    </div>
+    <div class="col-2"></div>
+  </div>
+
+  <div class="mb-3">
+    <div class="d-flex col-12">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <input
+          type="password"
+          class="form-control"
+          id="formGroupExampleInput2"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-primary" (click)="login()">Login</button>
+  </div>
+  <div class="mt-3 text-center">
+    <span>
+      Dont have an account? <a [routerLink]="['/register']">Register now</a>
+    </span>
+  </div>
+</div>
